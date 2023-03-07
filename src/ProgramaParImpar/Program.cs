@@ -1,21 +1,30 @@
 ﻿int numero;
+Console.WriteLine("Informe um valor para verificar se é Par: ");
+numero = int.Parse(Console.ReadLine());
 
-int Numero()
+imprime(1, 2.0);
+
+if (ehPar(numero))
 {
-    Console.WriteLine("Escreva um número: ");
-    return int.Parse(Console.ReadLine());
+    Console.WriteLine("O valor é Par!");
+}
+else
+{
+    Console.WriteLine("O valor é Impar!");
 }
 
-numero = Numero();
-
-void ParImpar()
+bool ehPar(int valor)
 {
-    if (numero % 2 == 0)
+    bool resposta = false;
+    if (valor % 2 == 0)
     {
-        Console.WriteLine("O número digitado é par");
-    }else
-    {
-        Console.WriteLine("O número digitado é ímpar");
+        resposta = true;
     }
+    return resposta;
+
 }
-ParImpar();
+void imprime(int valor, double numero)
+{
+    Console.WriteLine("O valor é: " + valor);
+    Console.WriteLine("O número é: " + numero);
+}
